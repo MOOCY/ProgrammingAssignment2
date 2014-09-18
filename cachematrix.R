@@ -35,12 +35,12 @@ makeCacheMatrix <- function(x = matrix()) {
 ## then cacheSolve will return the inverse from the cache.
 ##Example useage: See header, must first create matrix with makeCacheMatrix
 cacheSolve <- function(x, ...) {
-  ## Get Matrix "m" from Cache
-  m <- x$getinverse()
-  ## Check if not null, read from Cache
-  if(!is.null(m)) {
-    message("getting cached data")
-    return(m)
+        ## Get Matrix "m" from Cache
+        m <- x$getinverse()
+        ## Check if not null, read from Cache
+        if(!is.null(m)) {
+                message("getting cached data")
+                return(m)
   }
   ## if "m" is NULL, get original Matrix
   data <- x$get()
